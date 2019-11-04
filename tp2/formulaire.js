@@ -1,18 +1,27 @@
-<script type="text/javascript" src="formulaire.js"></script>
 function Validation() {
 
-if(document.getElementById("TxtNom").value.length<5)
-return document.getElementById("error").innerHTML = "La saisie du nom est obligatoire";
-if(document.getElementById("TxtPrenom").value.length<5)
-return document.getElementById("error").innerHTML = "La saisie du nom est obligatoire";
-if(document.getElementById("TxtAdresse").value.length<5)
-return document.getElementById("error").innerHTML = "La saisie du nom est obligatoire";
-if(document.getElementById("email").value.length<5)
-return document.getElementById("error").innerHTML = "La saisie du nom est obligatoire";
+    document.getElementById("error").innerHTML = "";
+    document.getElementById("error").style.visibility = "visible"; 
+    
+    document.getElementById("resultat").innerHTML = ""; 
+    document.getElementById("resultat").style.visibility = "hidden"; 
 
-if(document.getElementById("TxtNom").value.length>=5 &&
-document.getElementById("TxtPrenom").value.length>=5 &&
-document.getElementById("TxtAdresse").value.length>=5 &&
-document.getElementById("email").value.length>=5)
-renturn document.getElementById("resultat").innerHTML = "Bienvenue";
+    if (document.getElementById("txtNom").value.length < 5)
+        document.getElementById("error").innerHTML = "La saisie du nom est obligatoire";
+    if (document.getElementById("txtPrenom").value.length < 5)
+        document.getElementById("error").innerHTML = "La saisie du prénom est obligatoire";
+    if (document.getElementById("txtAdresse").value.length < 5)
+        document.getElementById("error").innerHTML = "La saisie du adresse est obligatoire";
+    if (document.getElementById("email").value.length < 5)
+        document.getElementById("error").innerHTML = "La saisie du mail est obligatoire";
+
+    if (document.getElementById("txtNom").value.length >= 5 &&
+        document.getElementById("txtPrenom").value.length >= 5 &&
+        document.getElementById("txtAdresse").value.length >= 5 &&
+        document.getElementById("email").value.length >= 5) { 
+            document.getElementById("resultat").innerHTML = "Bienvenue"; 
+            document.getElementById("resultat").style.visibility = "visible"; 
+            document.getElementById("error").style.visibility = "hidden"; 
+
+        }
 }
