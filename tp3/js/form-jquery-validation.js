@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     $("form").on("submit", function (event) {
         event.preventDefault();
-      ("#name").val() < 1
+      ("#nom").val() < 1
       
 ​
     });
