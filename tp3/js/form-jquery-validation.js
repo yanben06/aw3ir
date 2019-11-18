@@ -19,7 +19,7 @@ $(document).ready(function () {
             $(".modal-body").text("veuillez saisir votre mail");
             $('#myModal').modal("show");
         }
-
+else ($(".modal-body").text("Bienvenue Yanis") );
     });
 
 });
