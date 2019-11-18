@@ -26,7 +26,7 @@ $(document).ready(function () {
         if(error == ""){
             $(".modal-body").text("Bienvenue Yanis") ;
         }else{
-            $(".modal-body").text(error) ;
+            $(".modal-body").text("veuillez saisir tous les champs") ;
 
         }
         $('#myModal').modal("show");
