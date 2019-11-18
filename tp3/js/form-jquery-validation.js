@@ -22,11 +22,15 @@ $(document).ready(function () {
         if ($("#mail").val() < 1) {
             error += "veuillez saisir votre nom";
             //$(".modal-body").text("veuillez saisir votre mail");
-            $('#myModal').modal("show");
         }
         if(error == ""){
             $(".modal-body").text("Bienvenue Yanis") ;
+        }else{
+            $(".modal-body").text(error) ;
+
         }
+        $('#myModal').modal("show");
+
 
     });
 
