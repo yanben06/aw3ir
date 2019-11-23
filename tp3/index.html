@@ -36,14 +36,54 @@
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="main.js"></script>-->
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
+        <link rel="alternate" type="application/rss+xml" title="ROR" href="sitemap.xml" />
+        <link href="css/general.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/faq.css" rel="stylesheet" type="text/css" media="all">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <link href="js/ui/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" media="all">
+        <script type="text/javascript" src="js/ui/jquery.effects.core.js"></script>
+        <script type="text/javascript" src="js/ui/jquery.ui.core.js"></script>
+        <script type="text/javascript" src="js/ui/jquery.ui.datepicker.js"></script>
+        <script>
+          /* French initialisation for the jQuery UI date picker plugin. */
+          /* Written by Keith Wood (kbwood{at}iinet.com.au) and Stéphane Nahmani (sholby@sholby.net). */
+          jQuery(function($){
+            $.datepicker.regional['fr'] = {
+              closeText: 'Fermer',
+              prevText: '&#x3c;Préc',
+              nextText: 'Suiv&#x3e;',
+              currentText: 'Courant',
+              monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin',
+              'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+              monthNamesShort: ['Jan','Fév','Mar','Avr','Mai','Jun',
+              'Jul','Aoû','Sep','Oct','Nov','Déc'],
+              dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+              dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+              dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+              weekHeader: 'Sm',
+              dateFormat: 'dd/mm/yy',
+              firstDay: 1,
+              isRTL: false,
+              showMonthAfterYear: false,
+              yearSuffix: ''};
+            $.datepicker.setDefaults($.datepicker.regional['fr']);
+          });
+          $(function() {
+            $( "#datepicker[]" ).datepicker({
+              showOn: "button",
+              buttonImage: "images/general/calendar.gif",
+              buttonImageOnly: true,
+              changeMonth: true,
+              changeYear: true,
+              showAnim: "show"
+            });
+          });
+        
+          function bascule() {
+            $('#datepicker').datepicker();$('#datepicker').datepicker('show');	
+          }
+        
+          </script>
   </script>
     </head>
     <body>        
@@ -73,7 +113,9 @@
                   <input type="text" class="form-control" id="prenom" placeholder="Prenom">
                 </div>
                 <div class="form-group">
-                  <p>Date: <input type="text" id="datepicker"></p> <!--label for="date">Date de naissance</label>
+                  <p>Date: <input type="text" id="datepicker[0]" onclick="bascule();"></p>
+                  <p>Date: <input type="text" id="datepicker[1]" onclick="bascule();"></p>
+ <!--label for="date">Date de naissance</label>
                     <input type="date" class="form-control" id="date" placeholder="date"-->
                   </div>
                   <div class="form-group">
