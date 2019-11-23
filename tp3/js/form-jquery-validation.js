@@ -24,8 +24,9 @@ $(document).ready(function () {
             //$(".modal-body").text("veuillez saisir votre mail");
         }
         if(error == ""){
-            //$(".modal-body").text("Bienvenue Yanis") ;
-            $(".modal-body").html("Bienvenue Yanis BENSID"+'<img src="https://maps.googleapis.com/maps/api/staticmap?markers=Arcueil&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/ width="90%" >');
+            
+            $(".modal-body").text("Bienvenue Yanis") ;
+            ///$(".modal-body").html("Bienvenue Yanis BENSID"+'<img src="https://maps.googleapis.com/maps/api/staticmap?markers=Arcueil&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/ width="90%" >');
 
         }else{
             $(".modal-body").text("veuillez saisir tous les champs") ;
