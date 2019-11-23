@@ -27,7 +27,7 @@ $(document).ready(function () {
             
             //$(".modal-body").text("Bienvenue Yanis") ;
             $(".modal-title").text("Bievenue Yanis")
-            $(".modal-body").html($("#date")+'<img src="https://maps.googleapis.com/maps/api/staticmap?markers=Arcueil&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/ width="90%" >');
+            $(".modal-body").html('<img src="https://maps.googleapis.com/maps/api/staticmap?markers=Arcueil&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/ width="90%" >' + '<a href =https://www.google.com/maps/place/Arcueil-Cachan/@48.7983898,2.3256989,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671184bacc8d3:0x77f6f0cf17be4f39!8m2!3d48.7983898!4d2.3278876/>Arcueil</a>' );
 
         }else{
             $(".modal-body").text("veuillez saisir tous les champs") ;
