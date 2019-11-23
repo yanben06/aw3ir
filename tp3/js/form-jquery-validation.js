@@ -27,7 +27,7 @@ $(document).ready(function () {
             
             //$(".modal-body").text("Bienvenue Yanis") ;
             $(".modal-title").text("Bievenue Yanis")
-            $(".modal-body").html("vous êtes nés le" + $("#date").val() +'<img src="https://maps.googleapis.com/maps/api/staticmap?markers=Arcueil&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/ width="90%" >' + <a href="https://www.aaaa.fr" >Mon titre</a> );
+            $(".modal-body").html("vous êtes nés le" + $("#date").val() +'<img src="https://maps.googleapis.com/maps/api/staticmap?markers=Arcueil&zoom=10&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/ width="90%" >' + '<a href="https://www.aaaa.fr" >Mon titre</a>' );
 
         }else{
             $(".modal-body").text("veuillez saisir tous les champs") ;
