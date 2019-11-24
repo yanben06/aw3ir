@@ -28,7 +28,7 @@ $(document).ready(function () {
         if(error == ""){
                       //$(".modal-body").text("Bienvenue Yanis") ;
             $(".modal-title").text("Bievenue Yanis")
-            $(".modal-body").html("je suis né le "+ $("#date").val()+ " et j'habite à " +'<img src= ' +a+ '  width="90%" >' + "" +'<a href='+ b+ '>Arcueil,Ile-De-France</a>' );
+            $(".modal-body").html("je suis né le "+ $("#date").val()+ " et j'habite à " +'<img src= ' +a+ '  width="90%" >' + "" +'<a href='+ b+ '>'+$("#adresse").val()+'</a>' );
            
         }else{
             $(".modal-body").text("veuillez saisir tous les champs") ;
