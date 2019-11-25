@@ -72,7 +72,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputAdresse">Adresse</label>
-                    <input type="text" class="form-control" id="adresse" placeholder="Adresse">
+                    <input type="text" class="form-control" id="adresse" placeholder="Adresse"><br>
+                    <button type="button" class="btn btn-gps" type="bouton" onclick="getLocation()" id="gps">GPS</button>  
+                    <div id="map"></div>
+                    
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Adresse mail</label>
@@ -81,8 +84,7 @@
                   </div>
                  
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn btn-gps" type="bouton" onclick="getLocation()" id="gps">GPS</button>  
-                <div id="map"></div>
+
               </form>
            
 
