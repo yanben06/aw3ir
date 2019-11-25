@@ -21,6 +21,22 @@
 <script src="js/form-jquery-validation.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
+<script>
+  var x = document.getElementById("demo");
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+  
+  function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+  }
+  </script>
+
         <style>
           body{
               background-color: #e9ebee;              
@@ -79,8 +95,9 @@
                   </div>
                  
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn btn-gps">GPS</button>  
-            </form>
+                <button type="button" class="btn btn-gps" type="bouton" onclick="getLocation()" id="gps">GPS</button>  
+                <div id="map"></div>
+              </form>
            
 
                   
