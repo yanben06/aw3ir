@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 
     });
-    $( "#form" ).keydown(function() {
+    $( "#form" ).keyup(function() {
         $("nbcr1").text($("#nom").val().length+ "caractère(s)")
       
         });
