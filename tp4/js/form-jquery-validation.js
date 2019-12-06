@@ -40,3 +40,7 @@ $(document).ready(function () {
     });
 
 });
+
+$( "#nom" ).keydown(function() {
+    alert( "Handler for .keydown() called." );
+  });
