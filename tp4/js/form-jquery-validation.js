@@ -41,6 +41,7 @@ $(document).ready(function () {
 
 });
 
-$( "#nom" ).keydown(function() {
-    alert( "Handler for .keydown() called." );
+$( "#form" ).keydown(function() {
+  $("nbcr1").text($("#nom").val().length+ "caractère(s)")
+
   });
