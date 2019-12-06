@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     });
     $( "#formulaire" ).keyup(function() {
-        $("#nbcr1").text($("#nom").val().length+ "caractère(s)")
+        $("#nbcr1").text($("#nom").val().length+ "car")
       
         });
 });
