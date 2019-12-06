@@ -38,8 +38,8 @@ $(document).ready(function () {
 
 
     });
-    $( "#form" ).keyup(function() {
-        $("nbcr1").text($("#nom").val().length+ "caractère(s)")
+    $( "#formulaire" ).keyup(function() {
+        $("#nbcr1").text($("#nom").val().length+ "caractère(s)")
       
         });
 });
