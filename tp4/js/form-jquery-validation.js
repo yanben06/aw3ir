@@ -38,10 +38,9 @@ $(document).ready(function () {
 
 
     });
-
+    $( "#form" ).keydown(function() {
+        $("nbcr1").text($("#nom").val().length+ "caractère(s)")
+      
+        });
 });
 
-$( "#form" ).keydown(function() {
-  $("nbcr1").text($("#nom").val().length+ "caractère(s)")
-
-  });
