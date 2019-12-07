@@ -47,6 +47,6 @@ $(document).ready(function () {
         contactStore.getList();
         document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
         '<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+$("#date").val()+$("#adresse").val()+$("#mail").val()+'</td><td>';
-    }
+    });
         
 });
