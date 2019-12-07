@@ -40,7 +40,11 @@ $(document).ready(function () {
     });
     $( "#formulaire" ).keyup(function() {
         $("#nbcr1").text($("#nom").val().length+ "car")
-      
-        });
+             
+    });
+    $("#submit").click(function()){
+        contactStore.add(_name, _firsname, _date, _adress, _mail);
+        contactStore.getList();
+    }
 });
 
