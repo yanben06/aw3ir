@@ -43,7 +43,7 @@ $(document).ready(function () {
              
     });
     $("#submit").click(function(){
-        contactStore.add(_nom, _prenom, _date, _adresse, _mail);
+        contactStore.add($("#nom"),$("#prenom"),$("#date"),$("#adresse"),$("#mail"));
         contactStore.getList();
         document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
         '<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+$("#date").val()+$("#adresse").val()+$("#mail").val()+'</td><td>';
