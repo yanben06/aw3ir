@@ -42,9 +42,11 @@ $(document).ready(function () {
         $("#nbcr1").text($("#nom").val().length+ "car")
              
     });
-    $("#submit").click(function()){
+    $("#submit").click(function(){
         contactStore.add(_name, _firsname, _date, _adress, _mail);
         contactStore.getList();
+        document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
+        '<tr><td>'+nom+'</td><td>'+prenom+'</td><td>';
     }
+        
 });
-
