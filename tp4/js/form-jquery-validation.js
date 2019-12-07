@@ -46,7 +46,7 @@ $(document).ready(function () {
         contactStore.add(_name, _firsname, _date, _adress, _mail);
         contactStore.getList();
         document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
-        '<tr><td>'+nom+'</td><td>'+prenom+'</td><td>';
+        '<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+$("#date").val()+$("#adresse").val()+$("#mail").val()+'</td><td>';
     }
         
 });
