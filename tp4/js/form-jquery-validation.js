@@ -47,9 +47,8 @@ $(document).ready(function () {
        // contactStore.add(_nom, _prenom, _date, _adresse, _mail);
         contactStore.getList();
 //     
-  $("table tbody").html('<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+'</td><td>'+$("#date").val()+'</td><td>'+$("#adresse").val()+'</td><td>'+$("#mail").val()+'</td></tr>');
-  //document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
-  //'<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+'</td><td>'+$("#date").val()+'</td><td>'+$("#adresse").val()+'</td><td>'+$("#mail").val()+'</td></tr>';   
+ // $("table tbody").html('<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+'</td><td>'+$("#date").val()+'</td><td>'+$("#adresse").val()+'</td><td>'+$("#mail").val()+'</td></tr>');
+  document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +'<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+'</td><td>'+$("#date").val()+'</td><td>'+$("#adresse").val()+'</td><td>'+$("#mail").val()+'</td></tr>';   
 });
         
 });
