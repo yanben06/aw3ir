@@ -47,7 +47,7 @@ $(document).ready(function () {
        // contactStore.add(_nom, _prenom, _date, _adresse, _mail);
         contactStore.getList();
         document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
-        '<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+'<tr><td>'+$("#date").val()+'<tr><td>'+$("#adresse").val()+'<tr><td>'+$("#mail").val()+'</td></tr>';
+        '<tr><td>'+$("#nom").val()+'</td><td>'+$("#prenom").val()+'</td><td>'+$("#date").val()+'</td><td>'+$("#adresse").val()+'</td><td>'+$("#mail").val()+'</td></tr>';
     });
         
 });
