@@ -19,7 +19,7 @@ function Validation() {
         document.getElementById("txtPrenom").value.length >= 5 &&
         document.getElementById("txtAdresse").value.length >= 5 &&
         document.getElementById("email").value.length >= 5) { 
-            document.getElementById("resultat").innerHTML = document.getElementById("TxtNom").value; 
+            document.getElementById("resultat").innerHTML = document.querySelector("#TxtNom").value; 
             document.getElementById("resultat").style.visibility = "visible"; 
             document.getElementById("error").style.visibility = "hidden"; 
 
