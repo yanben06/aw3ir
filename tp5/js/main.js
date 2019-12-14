@@ -73,11 +73,34 @@ window.onload = function () {
                 }
             },
             remove: function (_city) {      
-                // A compléter dans la suite du TP          
+                this.cityList = this.cityList.filter(item => item.name != _city.name);
             }, 
             meteo: function (_city) {  
-                // A compléter dans la suite du TP              
+                this.cityWeatherLoading = true;
+
+                // appel AJAX avec fetch
+                fetch('https://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&apikey=95f9309b316f70cb479915e796cc873d')
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(json) {
+                        app.cityWeatherLoading = false;
+            
+                        // test du code retour
+                        // 200 = OK
+                        // 404 = city not found 
+                        if(json.cod === 200){
+                            // on met la réponse du webservice dans la variable cityWeather
+                            app.cityWeather = json;
+                            app.message = null;
+                        }else{
+                            app.cityWeather = null;
+                            app.message = 'Météo introuvable pour ' + _city.name 
+                                            + ' (' + json.message+ ')';
+                        }        
+                    });        
+                } // A compléter dans la suite du TP              
             }
-        }
+        
     });
 }
