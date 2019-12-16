@@ -27,19 +27,19 @@ window.onload = function () {
         // 'mounted' est exécuté une fois l'application VUE totalement disponible
         // Plus d'info. sur le cycle de vie d'une app VUE : 
         // https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
-        mounted : function(){
+        mounted : function(){/*
             this.loaded = true;
-            this.readData();
+            this.readData();*/
         },
 
         // ici, on définit les methodes qui vont traiter les données décrites dans DATA
         methods: {
-            readData: function (event) {/*
+            readData: function (event) {
                 console.log('JSON.stringify(this.cityList)', JSON.stringify(this.cityList)); // va afficher la liste des villes
                 // JSON.stringify permet transfomer une liste en chaine de caractère
 
                 console.log('this.loaded:', this.loaded); // va afficher 'this.loaded: true'
-            */},
+            },
             addCity: function (event) {
                 event.preventDefault(); // pour ne pas recharger la page à la soumission du formulaire
 
