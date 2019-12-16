@@ -72,11 +72,11 @@ window.onload = function () {
                     return false;
                 }
             },
-            remove: function (_city) {      
+            remove: function (_city) {/*      
                 this.cityList = this.cityList.filter(item => item.name != _city.name);
-            }, 
+            */}, 
             meteo: function (_city) {  
-               /* this.cityWeatherLoading = true;
+                this.cityWeatherLoading = true;
 
                 // appel AJAX avec fetch
                 fetch('https://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&apikey=1ff32a429fd5ef8cb5bbcadac4758af9 ')
@@ -99,7 +99,7 @@ window.onload = function () {
                                             + ' (' + json.message+ ')';
                         }        
                     });        
-                */} // A compléter dans la suite du TP              
+               } // A compléter dans la suite du TP              
             }
         
     });
