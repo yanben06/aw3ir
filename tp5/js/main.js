@@ -2,7 +2,7 @@ var app;
 window.onload = function () {
     app = new Vue({
         el: '#weatherApp', // cible l'élement HTML où nous pourrons utiliser toutes les variables ci-dessous
-        data: {/*
+        data: {
             // sera utilisé comme indicateur de chargement de l'application
             loaded: false,
 
@@ -22,7 +22,7 @@ window.onload = function () {
 
             // indicateur de chargement
             cityWeatherLoading : false
-        */},
+        },
 
         // 'mounted' est exécuté une fois l'application VUE totalement disponible
         // Plus d'info. sur le cycle de vie d'une app VUE : 
@@ -93,7 +93,8 @@ window.onload = function () {
                             // on met la réponse du webservice dans la variable cityWeather
                             app.cityWeather = json;
                             app.message = null;
-                        }else{
+                        }
+                        else{
                             app.cityWeather = null;
                             app.message = 'Météo introuvable pour ' + _city.name 
                                             + ' (' + json.message+ ')';
