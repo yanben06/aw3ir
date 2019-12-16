@@ -59,7 +59,7 @@ window.onload = function () {
             }
  // A compléter dans la suite du TP  
             },
-            isCityExist: function (_cityName){
+            isCityExist: function (_cityName){/*
 
                 // la méthode 'filter' retourne une liste contenant tous les items ayant un nom égale à _cityName
                 // doc. sur filter : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter
@@ -70,11 +70,11 @@ window.onload = function () {
                 }
                 else{
                     return false;
-                }
+                }*/
             },
-            remove: function (_city) {/*      
+            remove: function (_city) {      
                 this.cityList = this.cityList.filter(item => item.name != _city.name);
-            */}, 
+            }, 
             meteo: function (_city) {  
                 this.cityWeatherLoading = true;
 
