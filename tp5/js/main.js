@@ -1,6 +1,6 @@
 var app;
 window.onload = function () {
-    app = new Vue({
+    app = new Vue({/*
         el: '#weatherApp', // cible l'élement HTML où nous pourrons utiliser toutes les variables ci-dessous
         data: {
             // sera utilisé comme indicateur de chargement de l'application
@@ -22,14 +22,14 @@ window.onload = function () {
 
             // indicateur de chargement
             cityWeatherLoading : false
-        },
+        */},
 
         // 'mounted' est exécuté une fois l'application VUE totalement disponible
         // Plus d'info. sur le cycle de vie d'une app VUE : 
         // https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
-        mounted : function(){/*
+        mounted : function(){
             this.loaded = true;
-            this.readData();*/
+            this.readData();
         },
 
         // ici, on définit les methodes qui vont traiter les données décrites dans DATA
