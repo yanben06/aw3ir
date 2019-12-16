@@ -34,12 +34,12 @@ window.onload = function () {
 
         // ici, on définit les methodes qui vont traiter les données décrites dans DATA
         methods: {
-            readData: function (event) {
+            readData: function (event) {/*
                 console.log('JSON.stringify(this.cityList)', JSON.stringify(this.cityList)); // va afficher la liste des villes
                 // JSON.stringify permet transfomer une liste en chaine de caractère
 
                 console.log('this.loaded:', this.loaded); // va afficher 'this.loaded: true'
-            },
+            */},
             addCity: function (event) {
                 event.preventDefault(); // pour ne pas recharger la page à la soumission du formulaire
 
@@ -59,7 +59,7 @@ window.onload = function () {
             }
  // A compléter dans la suite du TP  
             },
-            isCityExist: function (_cityName){/*
+            isCityExist: function (_cityName){
 
                 // la méthode 'filter' retourne une liste contenant tous les items ayant un nom égale à _cityName
                 // doc. sur filter : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter
@@ -70,7 +70,7 @@ window.onload = function () {
                 }
                 else{
                     return false;
-                }*/
+                }
             },
             remove: function (_city) {      
                 this.cityList = this.cityList.filter(item => item.name != _city.name);
