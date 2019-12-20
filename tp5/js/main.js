@@ -24,6 +24,8 @@ window.onload = function () {
             cityWeatherLoading : false
         },
 
+        
+
         // 'mounted' est exécuté une fois l'application VUE totalement disponible
         // Plus d'info. sur le cycle de vie d'une app VUE : 
         // https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
@@ -44,11 +46,11 @@ window.onload = function () {
                 event.preventDefault(); // pour ne pas recharger la page à la soumission du formulaire
 
                 console.log('formCityName:',this.formCityName);
-             
-                 if(this.isCityExist(this.formCityName)){
-              this.messageForm = 'existe déjà';
-            }
-            else{
+                // A compléter dans la suite du TP  
+                    if(this.isCityExist(this.formCityName)){
+               this.messageForm = 'existe déjà';
+             }
+                 else{
                 this.cityList.push({name : this.formCityName});
 
                 // remise à zero du message affiché sous le formulaire
@@ -56,30 +58,31 @@ window.onload = function () {
 
                 // remise à zero du champ de saisie
                 this.formCityName = '';
-            }
- // A compléter dans la suite du TP  
+              }
             },
-            isCityExist: function (_cityName){
+              isCityExist: function (_cityName){
 
                 // la méthode 'filter' retourne une liste contenant tous les items ayant un nom égale à _cityName
                 // doc. sur filter : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter
-                if( this.cityList.filter(item => 
-                                            item.name.toUpperCase() == _cityName.toUpperCase()
-                                        ).length>0){
+                if( this.cityList.filter(item => item.name.toUpperCase() == _cityName.toUpperCase()).length>0){
                     return true;
                 }
                 else{
                     return false;
                 }
-            },
+           },
+            
             remove: function (_city) {      
-                this.cityList = this.cityList.filter(item => item.name != _city.name);
+                // A compléter dans la suite du TP   
+                // on utilise 'filter' pour retourne une liste avec tous les items ayant un nom différent de _city.name
+               this.cityList = this.cityList.filter(item => item.name != _city.name);       
             }, 
             meteo: function (_city) {  
+                // A compléter dans la suite du TP 
                 this.cityWeatherLoading = true;
 
                 // appel AJAX avec fetch
-                fetch('https://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&apikey=1ff32a429fd5ef8cb5bbcadac4758af9 ')
+                fetch('https://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&apikey=1ff32a429fd5ef8cb5bbcadac4758af9')
                     .then(function(response) {
                         return response.json();
                     })
@@ -93,16 +96,16 @@ window.onload = function () {
                             // on met la réponse du webservice dans la variable cityWeather
                             app.cityWeather = json;
                             app.message = null;
-                        }
-                        else{
+                        }else{
                             app.cityWeather = null;
                             app.message = 'Météo introuvable pour ' + _city.name 
                                             + ' (' + json.message+ ')';
                         }        
-                    });        
-               } // A compléter dans la suite du TP              
-            }
-        
+                    });    
+                        
+                }
+        }
     });
 }
 //95f9309b316f70cb479915e796cc873d
+//1ff32a429fd5ef8cb5bbcadac4758af9
