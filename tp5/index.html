@@ -11,15 +11,16 @@
         <!-- Place favicon.ico in the root directory -->
 
         <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width:800px ;            
-          }
-        </style>
-        
+            body{
+                background-color: #e9ebee;              
+                font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+                font-size: 16px;
+                margin: 0 auto;
+               padding-right: 300px;
+                padding-left: 300px;         
+            }
+          </style>
+          
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
          
          <script src="js/main.js"></script>
@@ -52,7 +53,7 @@
     <body>  
         
         
-        <h1>TP5</h1>
+        <center><h1>Météo</h1></center>
        
         <div id="weatherApp">
                 <!-- ici votre code HTML utilisé par VUE -->
@@ -105,7 +106,7 @@
 
         <div v-if="cityWeather">
 
-            <div class="card" style="width: 18rem;" v-if="cityWeather">
+            <center><div class="card" style="width: 18rem;" v-if="cityWeather">
                 <div class="card-header">
                     {{cityWeather.name}} 
                 </div>
@@ -140,7 +141,7 @@
                         {{new Date(cityWeather.sys.sunset * 1000).toTimeString()}}
                     </li>
                 </ul>        
-            </div>
+            </div></center>
         </div>
 
 
