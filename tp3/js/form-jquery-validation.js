@@ -26,13 +26,13 @@ $(document).ready(function () {
             $(".modal-body").text("veuillez saisir votre mail");
         }
         if(error == ""){
-                      //$(".modal-body").text("Bienvenue Yanis") ;
-            $(".modal-title").html("Bievenue "+$("#prenom").val() )
+                      $(".modal-body").text("Bienvenue Yanis") ;
+            //$(".modal-title").html("Bievenue "+$("#prenom").val() )
             $(".modal-body").html("je suis né le "+ $("#date").val()+ " et j'habite à " +'<img src= "' +a+ '"  width="90%" >' + "" +'<a href='+ b+ '><br>'+$("#adresse").val()+'</a>' );
            
         }
       
-
+        $('#myModal').modal("show");
 
     });
 
