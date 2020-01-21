@@ -27,7 +27,7 @@ $(document).ready(function () {
         }
         if(error == ""){
                       //$(".modal-body").text("Bienvenue Yanis") ;
-            $(".modal-title").text("Bievenue Yanis")
+            $(".modal-title").html("Bievenue "+$("#prenom").val() )
             $(".modal-body").html("je suis né le "+ $("#date").val()+ " et j'habite à " +'<img src= "' +a+ '"  width="90%" >' + "" +'<a href='+ b+ '><br>'+$("#adresse").val()+'</a>' );
            
         }else{
