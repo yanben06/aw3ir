@@ -6,7 +6,7 @@ $(document).ready(function () {
         event.preventDefault();
         if ($("#nom").val() < 1) {
             error += "veuillez saisir votre nom";
-            // $(".modal-body").text("veuillez saisir votre nom");
+             $(".modal-body").text("veuillez saisir votre nom");
             
             // $('#myModal').modal("show");
         }
@@ -18,22 +18,20 @@ $(document).ready(function () {
         }
         if ($("#adresse").val() < 1) {
             error += "veuillez saisir votre adresse";
-            // $(".modal-body").text("veuillez saisir votre adresse");
+             $(".modal-body").text("veuillez saisir votre adresse");
             $('#myModal').modal("show");
         }
         if ($("#mail").val() < 1) {
             error += "veuillez saisir votre mail";
-            //$(".modal-body").text("veuillez saisir votre mail");
+            $(".modal-body").text("veuillez saisir votre mail");
         }
         if(error == ""){
                       //$(".modal-body").text("Bienvenue Yanis") ;
-            $(".modal-title").text("Bievenue Yanis")
+            $(".modal-title").html($("#prenom").val())
             $(".modal-body").html("je suis né le "+ $("#date").val()+ " et j'habite à " +'<img src= "' +a+ '"  width="90%" >' + "" +'<a href='+ b+ '><br>'+$("#adresse").val()+'</a>' );
            
-        }else{
-            $(".modal-body").text("veuillez saisir tous les champs") ;
-
         }
+
         $('#myModal').modal("show");
 
 
